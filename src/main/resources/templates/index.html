@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>All Posts</title>
+</head>
+<body>
+<h2>All Posts:</h2>
+
+<div th:each="post : ${posts}">
+  <h3 th:text="${post.title}"></h3>
+  <p th:text="${post.body}"></p>
+  <a th:href="@{/posts/{id}(id=${postStat.count})}">Read More</a>
+</div>
+
+</body>
+</html>

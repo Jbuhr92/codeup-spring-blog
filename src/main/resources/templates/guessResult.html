@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Guess Result</title>
+</head>
+<body>
+<h2>Roll Result:</h2>
+
+<p th:text="'Dice rolled: ' + ${diceNumber}"></p>
+<p th:text="'You guessed: ' + ${guessedNumber}"></p>
+
+<h2 th:if="${isCorrect}" style="color:green">You guessed right!</h2>
+<h2 th:if="${!isCorrect}" style="color:red">Sorry, wrong guess. Try again!</h2>
+
+<a href="/roll-dice">Roll Again</a>
+
+</body>
+</html>

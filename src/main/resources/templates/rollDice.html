@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Roll a Dice</title>
+</head>
+<body>
+<h2>Guess a number:</h2>
+
+<ul>
+    <li th:each="num : ${numberList}">
+        <a th:href="@{/roll-dice/{n}(n=${num})}" th:text="${num}"></a>
+    </li>
+</ul>
+
+</body>
+</html>
