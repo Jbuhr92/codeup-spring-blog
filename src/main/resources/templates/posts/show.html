@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pose-a-Post</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+    <div>
+        <h2 th:text="${post.title}"></h2>
+        <p th:text="${post.body}"></p>
+    </div>
+    <form action="/posts/comment" method="post">
+        <label for="content">Comment:</label>
+        <textarea name="content" id="content" rows="10" cols="20"></textarea>
+        <input type="hidden" name="postId" th:value="${post.id}">
+        <button>Submit</button>
+    </form>
+</body>
+</html>

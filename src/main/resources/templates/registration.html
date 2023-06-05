@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="partials/head :: head"></head>
+<body>
+<div class="page-wrapper">
+  <header th:replace="partials/navbar :: navbar"></header>
+  <div class="container grow justify-center">
+    <div class="row justify-center">
+      <div class="column shrink">
+        <form th:action="@{/register}" th:method="post">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email">
+          <label for="password">Password</label>
+          <input type="text" id="password" name="password">
+          <button class="btn primary">Sign me up!</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

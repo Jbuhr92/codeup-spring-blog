@@ -1,0 +1,35 @@
+<header th:fragment="navbar" class="container">
+    <div class="row grow">
+        <div class="column shrink justify-center">
+            LOGO HERE
+        </div>
+        <div class="column align-right">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/static">Home</a>
+                    </li>
+                    <li>
+                        <a href="/posts">Posts</a>
+                        <ul>
+                            <li>
+                                <a href="/posts">View All</a>
+                            </li>
+                            <li>
+                                <a href="#">My Posts</a>
+                            </li>
+                            <li>
+                                <a href="/posts/create">Create Post</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <form th:action="@{/logout}" method="post">
+                            <input type="submit" value="Logout">
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
